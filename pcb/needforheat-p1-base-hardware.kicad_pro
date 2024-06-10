@@ -443,7 +443,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "KiCad schema.kicad_pro",
+    "filename": "needforheat-p1-base-hardware.kicad_pro",
     "version": 1
   },
   "net_settings": {

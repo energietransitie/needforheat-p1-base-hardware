@@ -1,11 +1,11 @@
 %TF.GenerationSoftware,KiCad,Pcbnew,8.0.1*%
-%TF.CreationDate,2024-05-29T09:24:11+02:00*%
-%TF.ProjectId,KiCad schema,4b694361-6420-4736-9368-656d612e6b69,rev?*%
+%TF.CreationDate,2024-06-07T19:57:48+02:00*%
+%TF.ProjectId,needforheat-p1-base-hardware,6e656564-666f-4726-9865-61742d70312d,rev?*%
 %TF.SameCoordinates,Original*%
 %TF.FileFunction,Profile,NP*%
 %FSLAX46Y46*%
 G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
-G04 Created by KiCad (PCBNEW 8.0.1) date 2024-05-29 09:24:11*
+G04 Created by KiCad (PCBNEW 8.0.1) date 2024-06-07 19:57:48*
 %MOMM*%
 %LPD*%
 G01*
