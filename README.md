@@ -1,6 +1,6 @@
 # NeedForHeat P1-BASE hardware 
 
-This repository contains the open hardware design files for the NeedForHeeat NeedForHeat P1-BASE device, which can be used as a [CoreInk BASE extension module](https://docs.m5stack.com/en/coreink/proto_base), below an [M5Stack CoreInk]([https://github.com/LilyGO/ESP32-MINI-32-V1.3](https://docs.m5stack.com/en/core/coreink)) device.. 
+This repository contains the open hardware design files for the NeedForHeat P1-BASE device, which can be used as a [CoreInk BASE extension module](https://docs.m5stack.com/en/coreink/proto_base), below an [M5Stack CoreInk]([https://github.com/LilyGO/ESP32-MINI-32-V1.3](https://docs.m5stack.com/en/core/coreink)) device.. 
 
 The NeedForHeat P1-BASE enables reading [smart meters that adhere to the Dutch Smart Meter Requirements](https://github.com/energietransitie/dsmr-info).
 
