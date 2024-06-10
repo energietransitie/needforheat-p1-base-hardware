@@ -73,7 +73,7 @@ The hardware designs in this repository are available under the [CERN-OHL-P v2 l
 ## Credits
 This open hardware design is a collaborative effort of:
 * Rick de Graaf · [@277r](https://github.com/277r) 
-* <contributor name 2> · [@Github_handle_2](https://github.com/<github_handle_2>) · Twitter [@Twitter_handle_2](https://twitter.com/<twitter_handle_2>)
+* Gerwin ten Have · [@GerwintenHave](https://github.com/GerwintenHave) 
 
 <!-- 
 Thanks also go to:
