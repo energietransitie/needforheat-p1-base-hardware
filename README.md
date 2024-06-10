@@ -1,6 +1,6 @@
 # NeedForHeat P1-BASE hardware 
 
-This repository contains the open hardware design files for the NeedForHeat P1-BASE device, which can be used as a [CoreInk BASE extension module](https://docs.m5stack.com/en/coreink/proto_base), below an [M5Stack CoreInk]([https://github.com/LilyGO/ESP32-MINI-32-V1.3](https://docs.m5stack.com/en/core/coreink)) device.. 
+This repository contains the open hardware design files for the NeedForHeat P1-BASE device, which can be used as a [CoreInk BASE extension module](https://docs.m5stack.com/en/coreink/proto_base), below an [M5Stack CoreInk]([https://github.com/LilyGO/ESP32-MINI-32-V1.3](https://docs.m5stack.com/en/core/coreink)) device. 
 
 The NeedForHeat P1-BASE enables reading [smart meters that adhere to the Dutch Smart Meter Requirements](https://github.com/energietransitie/dsmr-info).
 
@@ -58,8 +58,7 @@ The source files of the enclosure can be found in the folder [enclosure](./enclo
 ## Features
 The NeedForHeat P1-BASE features the following main hardware components:
 * Built-in splitter that allows another smart meter reader to be connected;
-* awesome feature 2;
-* awesome feature 3.
+* Schmitt trigger that reduces signal noise.
 
 To-do:
 * Develop an enclosure
@@ -75,20 +74,22 @@ The hardware designs in this repository are available under the [CERN-OHL-P v2 l
 This open hardware design is a collaborative effort of:
 * Rick de Graaf · [@277r](https://github.com/277r) 
 * <contributor name 2> · [@Github_handle_2](https://github.com/<github_handle_2>) · Twitter [@Twitter_handle_2](https://twitter.com/<twitter_handle_2>)
-* <contributor name 3> · [@Github_handle_3](https://github.com/<github_handle_3>) · Twitter [@Twitter_handle_3](https://twitter.com/<twitter_handle_3>)
-* etc. 
 
+<!-- 
 Thanks also go to:
 * <thanks name 1> · [@Github_handle_1](https://github.com/<github_handle_1>) · Twitter [@Twitter_handle_1](https://twitter.com/<twitter_handle_1>)
 * <thanks name 2> · [@Github_handle_2](https://github.com/<github_handle_2>) · Twitter [@Twitter_handle_2](https://twitter.com/<twitter_handle_2>)
+-->
 
 Product owner:
 * Henri ter Hofte · [@henriterhofte](https://github.com/henriterhofte) · Twitter [@HeNRGi](https://twitter.com/HeNRGi)
 * Marco Winkelman · [@MarcoW71](https://github.com/MarcoW71)
 
+<!-- no libraries used
 We use and gratefully acknowlegde the efforts of the makers of the following designs:
 
 * [library name 1 and version](library 1 URL), by <copyright holder name 1>, licensed under [license 1 name](license1 URL)
 * [library name 2 and version](library 2 URL), by <copyright holder name 2>, licensed under [license 2 name](license2 URL)
 * [library name 3 and version](library 3 URL), by <copyright holder name 3>, licensed under [license 3 name](license3 URL)
 * etc. 
+-->
