@@ -36,6 +36,15 @@ the output of this signal is connected to a Schmitt-trigger (IC1). This improves
 Q1 and Q2 form a level-shifter circuit that allows the 3.3V output from the M5Stack CoreInk to give a 5V output to the smart meter. This signals that data can be sent from the smart meter to the P1-BASE.
 
 #### Internal Splitter
+In the original design there wasn’t an internal splitter. Instead of this “the client” would get a package with pre-wired items. This was both messy and confusing for “the client”. This is why there was chosen to use an internal splitter in this design. 
+
+To design the splitter there were some things to consider beforehand. One of these problems was how the other device could be connected to the splitter to either get or don’t get information. Normally this wouldn’t be much of an issue. The main problem would be if the other device was connected through ground. This would result in the data port being stuck as a logical 0 and the other device not being able to request data. 
+
+Because of this issue there were diodes added. These make it so the current could not go to the ground while not restricting the device from requesting data. 
+Another issue is what device is allowed to send a data request to the smart meter. A device that could ask for information is called a master, and a device that cant request it is called a slave. It can change what device needs to be dependent on the devices themselves. 
+
+Because of this a dip switch was added where slipping the switch would make a device switch between being a master or a slave. One of the switches though is used to make it so the smart meter will always send data regardless even when de device doesn’t requesting it. 
+
 
 #### Important information 
 * R7 and Q3 should not be assembled on the PCB. These are included in the PCB in case the optocoupler (U1) is not fast enough for the signals
