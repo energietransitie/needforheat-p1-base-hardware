@@ -44,6 +44,8 @@ Because of this issue there were diodes added. These make it so the current coul
 Another issue is what device is allowed to send a data request to the smart meter. A device that could ask for information is called a master, and a device that cant request it is called a slave. It can change what device needs to be dependent on the devices themselves. 
 
 Because of this a dip switch was added where slipping the switch would make a device switch between being a master or a slave. One of the switches though is used to make it so the smart meter will always send data regardless even when de device doesn’t requesting it. 
+![image](https://github.com/energietransitie/needforheat-p1-base-hardware/assets/159789931/4d5e910e-4a6b-48e6-9d21-6f5d7cf72989)
+
 
 
 #### Important information 
