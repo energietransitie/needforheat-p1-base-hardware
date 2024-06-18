@@ -36,6 +36,15 @@ the output of this signal is connected to a Schmitt-trigger (IC1). This improves
 Q1 and Q2 form a level-shifter circuit that allows the 3.3V output from the M5Stack CoreInk to give a 5V output to the smart meter. This signals that data can be sent from the smart meter to the P1-BASE.
 
 #### Internal Splitter
+In the original design there wasn’t an internal splitter. Instead of this “the client” would get a package with pre-wired items. This was both messy and confusing for “the client”. This is why it has been decided to add an internal splitter to this design. 
+
+To design the splitter there are some aspects that were considered beforehand. One was how the other  device (an external device that is not ours) could be connected to the splitter to either receive or not receive information. Normally this wouldn’t be much of an issue and the only problem would be when the other device was connected through ground. This would result in the data port being stuck as a logical 0 and the other device not being able to request data. For this design, because of the  connection issue, diodes were added. In this way  the current cannot go to the ground while not restricting the device from requesting data. 
+
+Another issue is that device should be allowed to send a data request to the smart meter. A device that can ask for information is called a master, and a device that cannot request information is called a slave. The master or slave status of a device may  change depending on if the device needs input or should sent input to another device in order to be able for a device to change status, a dip switch was added where slipping the switch would make a device switch between being a master or a slave. One of the switches though is used to ensure that the smart meter is always able to send data regardless whether the device is requesting it or not. In this image below the 5V_METER is the switch for the smart meter always sending information. The EXT_DATA_REQ is the external device and the DATA_REQ is our own device. The METER_DATA_REQ goes to the smart meters data request line. 
+
+![image](https://github.com/energietransitie/needforheat-p1-base-hardware/assets/159789931/4d5e910e-4a6b-48e6-9d21-6f5d7cf72989)
+
+
 
 #### Important information 
 * R7 and Q3 should not be assembled on the PCB. These are included in the PCB in case the optocoupler (U1) is not fast enough for the signals
