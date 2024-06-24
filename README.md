@@ -1,4 +1,4 @@
-# NeedForHeat P1-BASE hardware 
+# NeedForHeat P1-BASE hardware <!-- omit in toc -->
 
 This repository contains the open hardware design files for the NeedForHeat P1-BASE device, which can be used as a [CoreInk BASE extension module](https://docs.m5stack.com/en/coreink/proto_base), on the back of an [M5Stack CoreInk](https://docs.m5stack.com/en/core/coreink) device. 
 
@@ -6,22 +6,20 @@ The NeedForHeat P1-BASE enables reading [smart meters that adhere to the Dutch S
 
 <img src="./images/pcb.jpg" width="600"  />
 
-## Table of contents
-- [NeedForHeat P1-BASE hardware](#needforheat-p1-base-hardware)
-  - [Table of contents](#table-of-contents)
-  - [General info](#general-info)
-  - [Producing](#producing)
-    - [Printed Circuit Board](#printed-circuit-board)
-    - [Enclosure](#enclosure)
-  - [Deploying](#deploying)
-    - [Connecting the device](#connecting-the-device)
-    - [Setting the DIP Switches](#setting-the-dip-switches)
-  - [Developing](#developing)
-    - [Printed Circuit Board](#printed-circuit-board-1)
-  - [Features](#features)
-  - [Status](#status)
-  - [License](#license)
-  - [Credits](#credits)
+## Table of contents <!-- omit in toc -->
+- [General info](#general-info)
+- [Producing](#producing)
+  - [Printed Circuit Board](#printed-circuit-board)
+  - [Enclosure](#enclosure)
+- [Deploying](#deploying)
+  - [Connecting the device](#connecting-the-device)
+  - [Setting the DIP Switches](#setting-the-dip-switches)
+- [Developing](#developing)
+  - [Printed Circuit Board](#printed-circuit-board-1)
+- [Features](#features)
+- [Status](#status)
+- [License](#license)
+- [Credits](#credits)
 
 ## General info
 This repository contains the open hardware designs files for the NeedForHeat P1-BASE. It also includes a `docs` folder with recent printouts of the [schematics](./docs/needforheat-p1-base-hardware-sch.pdf) and [PCB layout](./docs/needforheat-p1-base-hardware-pcb.pdf). 

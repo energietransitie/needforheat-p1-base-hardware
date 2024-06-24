@@ -1,14 +1,12 @@
-# P1-BASE-hardware Documentation
+# P1-BASE-hardware Documentation <!-- omit in toc -->
 
-## Table of contents
-- [P1-BASE-hardware Documentation](#p1-base-hardware-documentation)
-  - [Table of contents](#table-of-contents)
-  - [Usage](#usage)
-  - [Design choices](#design-choices)
-    - [Smart meter connection](#smart-meter-connection)
-    - [Data Request Line Management](#data-request-line-management)
-    - [Internal Splitter](#internal-splitter)
-    - [Optional components](#optional-components)
+## Table of contents <!-- omit in toc -->
+- [Usage](#usage)
+- [Design choices](#design-choices)
+  - [Smart meter connection](#smart-meter-connection)
+  - [Data Request Line Management](#data-request-line-management)
+  - [Internal Splitter](#internal-splitter)
+  - [Optional components](#optional-components)
 
 ## Usage
 <img src="../images/pcb.jpg" width="600"  />
