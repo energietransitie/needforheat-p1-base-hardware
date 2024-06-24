@@ -53,7 +53,7 @@ The internal splitter eliminates the need for external pre-wired components, sim
 
 A DIP switch (`SW1`) enables configuration of `5V_METER`, `EXT_DATA_REQ`, and `DATA_REQ` signals to `METER_DATA_REQ`, linked via `J2` to the smart meter's data request line. For setup details, refer to the [DIP switch configuration section in the main README](../README.md#setting-the-dip-switches), which explains how these settings influence operational behavior.
 
-![image](../images\schematic_SW1.PNG)
+![image](../images/schematic_SW1.PNG)
 
 
 ### Optional components
