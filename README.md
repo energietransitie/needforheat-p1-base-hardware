@@ -39,7 +39,7 @@ If you do not want to solder components on the PCB yourself, select `PCB assembl
 
 JLCPCB provides detailed steps on their website to select component assembly, including wave soldering. For wave soldering or through-hole component assembly, specify this requirement when uploading your BOM and POS files. 
 
-> After uploading BOM and CPL, you may be asked to select a component for Q3. You do not need to do so and can select 'do not place. For more information, see the [design document](docs\documentation.md#optional-components)
+> After uploading BOM and CPL, you may be asked to select a component for Q3. You do not need to do so and can select 'do not place. For more information, see the [design document](docs/documentation.md#optional-components)
 
 
 
