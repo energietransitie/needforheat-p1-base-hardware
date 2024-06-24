@@ -37,7 +37,7 @@ If you do not want to solder components on the PCB yourself, select `PCB assembl
 
 JLCPCB provides detailed steps on their website to select component assembly, including wave soldering. For wave soldering or through-hole component assembly, specify this requirement when uploading your BOM and POS files. 
 
-> After uploading BOM and CPL, you may be asked to select a component for Q3. You do not need to do so and can select 'do not place. For more information, see the [design document](docs/documentation.md#optional-components)
+> After uploading BOM and CPL, you may be asked to select a component for `Q3`. You do not need to do so and can select 'do not place'. For more information, see the [design document](docs/documentation.md#optional-components).
 
 
 
@@ -57,7 +57,7 @@ The folder [enclosure/fabrication](./enclosure/fabrication) contains exported ST
 
 ## Deploying
 
-To deploy to P1-BASE to a home, in addition to the P1-BASE PCB and associated enclosure, you need addional hardware. We list these below, with links to the suppliers we used before:
+To deploy P1-BASE to a home, in addition to the P1-BASE PCB and associated enclosure, you need addional hardware. We list these below, with links to the suppliers we used before:
 * [M5Stack CoreInk](https://www.tinytronics.nl/nl/platformen-en-systemen/m5stack/e-paper/m5stack-m5core-ink-met-1.54-inch-e-paper-e-ink-display-esp32) device
 * [RJ12 cable (male-male; 6P6C; straight)](https://www.inline-info.com/en/products/cable/tae-isdn-modular-telephone/rj10111245-modular-cable/8637/inline-modular-cable-rj12-male-to-male-6p6c-0.5m)<br>*The shorter the cable the better: this allows users to simply click in the RJ12 connector to the P1 port of their smart to leave and leave the NeedForHeat smart meter reader device dangling from the P1-port;*
 * [USB-C power cable and 230V adapter]();<br>This is only needed for users who have a [smart meter adhering to DSMR3.0 or older](https://github.com/energietransitie/dsmr-info/blob/main/dsmr-e-meters.csv).
@@ -66,7 +66,7 @@ To deploy to P1-BASE to a home, in addition to the P1-BASE PCB and associated en
 
 Assuming that the PCB is fully assembled, the device has an enclosure, and the device has been programmed with the [needforheat-p1-reader-firmware](https://github.com/energietransitie/needforheat-p1-reader-firmware), you can proceed and connect the device as follows:
 
-1. **2x 8male pin header (`J1` on the PCB)**<br> Connect to the M5Stack CoreInk MI-BUS, ensuring alignment of the PCB outline with theM5Stack CoreInk outline.
+1. **2x8 male pin header (`J1` on the PCB)**<br> Connect to the M5Stack CoreInk MI-BUS, ensuring alignment of the PCB outline with the M5Stack CoreInk outline.
 2. **Upper female RJ12 connector (`J2` on the PCB)**<br> Connect to the smart meter using an RJ12 cable (male-male; 6P6C; straight).
 3. **Lower female RJ12 Connector(`J3` on the PCB)**<br> (Optional) Connect another smart meter raeder.
 
@@ -138,6 +138,6 @@ This open hardware design is a collaborative effort of:
 Product owners:
 * Henri ter Hofte · [@henriterhofte](https://github.com/henriterhofte) · Twitter [@HeNRGi](https://twitter.com/HeNRGi)
 * Marco Winkelman · [@MarcoW71](https://github.com/MarcoW71)
-* 
+
 We use and gratefully acknowlegde the efforts of the makers of:
 * [KiCad Libraries](https://kicad.github.io/), by the KiCad Development Team, licensed under [an adapted version of the CC-BY-SA 4.0 License](https://www.kicad.org/libraries/license/)
