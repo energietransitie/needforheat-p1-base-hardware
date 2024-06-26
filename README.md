@@ -12,7 +12,8 @@ The NeedForHeat P1-BASE enables reading [smart meters that adhere to the Dutch S
   - [Printed Circuit Board](#printed-circuit-board)
   - [Enclosure](#enclosure)
 - [Deploying](#deploying)
-  - [Connecting the device](#connecting-the-device)
+  - [Cost](#cost)
+  - [Connecting](#connecting)
   - [Setting the DIP Switches](#setting-the-dip-switches)
 - [Developing](#developing)
   - [Printed Circuit Board](#printed-circuit-board-1)
@@ -57,18 +58,43 @@ The folder [enclosure/fabrication](./enclosure/fabrication) contains exported ST
 
 ## Deploying
 
-To deploy P1-BASE to a home, in addition to the P1-BASE PCB and associated enclosure, you need addional hardware. We list these below, with links to the suppliers we used before:
-* [M5Stack CoreInk](https://www.tinytronics.nl/nl/platformen-en-systemen/m5stack/e-paper/m5stack-m5core-ink-met-1.54-inch-e-paper-e-ink-display-esp32) device
-* [RJ12 cable (male-male; 6P6C; straight)](https://www.inline-info.com/en/products/cable/tae-isdn-modular-telephone/rj10111245-modular-cable/8637/inline-modular-cable-rj12-male-to-male-6p6c-0.5m)<br>*The shorter the cable the better: this allows users to simply click in the RJ12 connector to the P1 port of their smart to leave and leave the NeedForHeat smart meter reader device dangling from the P1-port;*
-* [USB-C power cable and 230V adapter]();<br>This is only needed for users who have a [smart meter adhering to DSMR3.0 or older](https://github.com/energietransitie/dsmr-info/blob/main/dsmr-e-meters.csv).
+To deploy P1-BASE to a home as the NeedForHeat Smart Meter module, in addition to the PCB you need additional hardware: enclusure, M5Stack CoreInk, a short RJ12 cable and for some homes a power adapter. In this section we describe the cose and connections.
 
-### Connecting the device
+### Cost
+
+Prices indicate price per module in June 2024, based on ordering enough hardware for 10 modules, including 21% VAT and shipping to an address in the Netherlands.
+
+| #   | Item                                                                                                                                                 | Supplier    | Price per Unit |   Subtotal |  Shipping |      Total |
+| --- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | -------------: | ---------: | --------: | ---------: |
+| 1   | P1-BASE PCB                                                                                                                                          | JLCPCB      |          €2.40 |      €2.40 |     €2.38 |      €4.78 |
+| 1   | P1-BASE enclosure                                                                                                                                    | JLCPCB      |          €1,30 |      €1,30 |     €2,40 |      €3,60 |
+| 1   | [M5Stack CoreInk](https://www.tinytronics.nl/nl/platformen-en-systemen/m5stack/e-paper/m5stack-m5core-ink-met-1.54-inch-e-paper-e-ink-display-esp32) | TinyTronics |         €43.00 |     €43.00 |     €0.00 |     €43.00 |
+| 4   | [LEGO pen stroef + pen stroef](https://www.blokjeskoning.nl/product/pen-stroef-pen-stroef-zwart/) | Blokjeskoning |         €0.03 |   €0.12 |    €0.30 | €0.42 |
+| 1   | [RJ12 cable (male-male; 6P6C; straight; 0.5 m or shorter)](https://www.amazon.nl/-/en/InLine-18848A-Modular-Cable-6-Core/dp/B005I1UDOE/)[^1]         | AlleKabels  |          €5.95 |      €5.95 |     €0.00 |      €5.95 |
+| 1   | [USB-A 230V charger + USB-A to USB-C cable](https://www.allekabels.nl/usb-oplader/4508/3636716/usb-a-oplader-usb-c-kabel.html)                       | AlleKabels  |         €14.95 |     €14.95 |     €0.13 |     €15.08 |
+|     | **TOTAL**                                                                                                                                            |             |     **€67.60** | **€67.72** | **€6,21** | **€72,83** |
+
+[^1]: The shorter the cable the better: this allows users to simply click in the RJ12 connector of te to the P1 port of their smart to leave and leave the NeedForHeat smart meter reader device dangling from the P1-port;*
+
+### Connecting
 
 Assuming that the PCB is fully assembled, the device has an enclosure, and the device has been programmed with the [needforheat-p1-reader-firmware](https://github.com/energietransitie/needforheat-p1-reader-firmware), you can proceed and connect the device as follows:
 
-1. **2x8 male pin header (`J1` on the PCB)**<br> Connect to the M5Stack CoreInk MI-BUS, ensuring alignment of the PCB outline with the M5Stack CoreInk outline.
-2. **Upper female RJ12 connector (`J2` on the PCB)**<br> Connect to the smart meter using an RJ12 cable (male-male; 6P6C; straight).
-3. **Lower female RJ12 Connector(`J3` on the PCB)**<br> (Optional) Connect another smart meter raeder.
+Before sending the device to a home:
+
+1. Mount the P1-BASE in its enclosure.
+1. Connect the short RJ12 cable to the upper female RJ12 connector[^2].
+1. Insert 2 lego pens in the enclusure at opposite diagonal corners. 
+1. Insert 2 lego pens in the holes on the back side of the M5Stack CoreInk at opposite diagonal corners.
+4. Do NOT connect the P1_BASE and M5Stack CoreInk, before sending, since they will not fit in a standard [PostNL brievenbusdoos](https://shop.postnl.nl/webshop/verpakkingen/brievenbusdoos-a5-255x160x28mm) when stacked.
+
+[^2]: By pre-connecting the RJ12 cable to connector `J2` on the PCB, you help users at home avoid installation errors. You may even consider clipping off 3 to 4 mm from the latch of the modular conector. After insertion the connector does not protrude from the female connecto, which clearly signals to the user that this cable should not be deinstalled. 
+
+After receiving the device in a home:
+1. Connect to the P1-BASE to the based of the M5Stack CoreInk, ensuring alignment of M5Stack CoreInk with the P1-BASE; the LEGO pins will help make sure that the 2x8 pin connector of the P1-BASE properly connects to M5Stack CoreInk.
+2. Unplug your existing smart meter reader (if any) from the P1 port smart meter
+3. Connect the plug of the NeedForHeat smart meter module in the P1 port .
+4. Plug the RJ16 connector of our existing smart meter reader into the bottom RJ12 socket of the P1-BASE.
 
 ### Setting the DIP Switches
 
@@ -80,7 +106,7 @@ The hardware version v2.7 (2024-06-07) features 3 DIP switches on the PCB to con
 | 2                 | Data request driven by M5Stack CoreInk             | Data request from M5Stack CoreInk ignored             |
 | 3                 | Data request driven by external smart meter reader | Data request from external smart meter reader ignored |
 
-If multiple DIP switches are ON simultaneously, data is requested if any corresponding source requires it.
+If multiple DIP switches are ON simultaneously, data is requested if any corresponding source requires it. This may cause the external smart meter reader to receive partial messages, but according to the [DSMR P1 Port Companion Standard](https://github.com/energietransitie/dsmr-info?tab=readme-ov-file#dsmr-versions-standards) since version 3.0, smart meter readers should be able to handle partial messages.
 
  
 ## Developing
@@ -106,22 +132,22 @@ The source files of the enclosure can be found in the folder [enclosure](./enclo
 
 The NeedForHeat P1-BASE includes the following main hardware components:
 
-* Built-in P1-splitter for connecting an additional smart meter reader to the lower female RJ12 connector (`J3`).
-* Integrated [Schmitt trigger](https://en.wikipedia.org/wiki/Schmitt_trigger) to reduce signal noise.
-* 3 DIP-switches on the PCB for enabling/disabling data request line management.
-* Bottom-side 2x8 pin header for MI-BUS connection to the [M5Stack CoreInk](https://docs.m5stack.com/en/core/coreink) (requires soldering yourself, or a hefty JLCPCB fee for bottom-side hand-soldering).
+- [x] Built-in P1-splitter for connecting an additional smart meter reader to the lower female RJ12 connector (`J3`).
+- [x] Integrated [Schmitt trigger](https://en.wikipedia.org/wiki/Schmitt_trigger) to reduce signal noise.
+- [x] 3 DIP-switches on the PCB for enabling/disabling data request line management.
+- [x] Bottom-side 2x8 pin header for MI-BUS connection to the [M5Stack CoreInk](https://docs.m5stack.com/en/core/coreink) (requires soldering yourself, or a hefty JLCPCB fee for bottom-side hand-soldering).
 
 To-do:
 
-* Test compatibility with Landis+Gyr E360 series smart meters (e.g., [Landis+Gyr CD2D](https://www.landisgyr.eu/), [CM3D](https://www.landisgyr.eu/)).
-* Consider using 'upside-down' RJ12 female connectors for easier [M5Stack CoreInk](https://docs.m5stack.com/en/core/coreink) screen readability.
-* Evaluate relocating and optimizing the 2x8 pin header from the bottom side to the top side of the PCB to reduce manufacturing costs. 
-  * > (This would also obviate the need for 'upside-down' RJ12 female connectors, above.)
-* Refine PCB design to reduce trace lenghts where possible.
-* Experiment with alternative data request management methods (e.g., MOSFETs, BJTs), which would allow the [M5Stack CoreInk](https://docs.m5stack.com/en/core/coreink) to check and control data request management in software.
-* Implement low-power LEDs for indicating power status, data request status, and data flow.
-* Develop energy-efficient charging strategies for the [M5Stack CoreInk](https://docs.m5stack.com/en/core/coreink) 390mAh LiPo battery from DSMR 4 and DSMR 5 smart meters, without triggering the fold-back current limiting feature of some smart meters.
-* Design a 3D-printable enclosure compatible with the [M5Stack CoreInk](https://docs.m5stack.com/en/core/coreink), potentially using [LEGO connector pens](https://www.blokjeskoning.nl/product/pen-stroef-pen-stroef-zwart/). A preliminary version can be found in the [needforheat-boiler-monitor-hardware repository](https://github.com/energietransitie/needforheat-boiler-monitor-hardware).
+- [ ] Test compatibility with Landis+Gyr E360 series smart meters (e.g., [Landis+Gyr CD2D](https://www.landisgyr.eu/), [CM3D](https://www.landisgyr.eu/)).
+- [ ] Consider using 'upside-down' RJ12 female connectors for easier [M5Stack CoreInk](https://docs.m5stack.com/en/core/coreink) screen readability.
+- [ ] Evaluate relocating and optimizing the 2x8 pin header from the bottom side to the top side of the PCB to reduce manufacturing costs. 
+  > (This would also obviate the need for 'upside-down' RJ12 female connectors, above.)
+- [ ] Refine PCB design to reduce clutter where possible.
+- [ ] Experiment with alternative data request management methods (e.g., MOSFETs, BJTs), which would allow the [M5Stack CoreInk](https://docs.m5stack.com/en/core/coreink) to check and control data request management in software.
+- [ ] Implement low-power LEDs for indicating power status, data request status, and data flow.
+- [ ] Develop energy-efficient charging strategies for the [M5Stack CoreInk](https://docs.m5stack.com/en/core/coreink) 390 mAh LiPo battery from DSMR 4 and DSMR 5 smart meters, without triggering the fold-back current limiting feature of some smart meters.
+- [ ] Design a 3D-printable enclosure compatible with the [M5Stack CoreInk](https://docs.m5stack.com/en/core/coreink), potentially using [LEGO connector pens](https://www.blokjeskoning.nl/product/pen-stroef-pen-stroef-zwart/). A preliminary version can be found in the [needforheat-boiler-monitor-hardware repository](https://github.com/energietransitie/needforheat-boiler-monitor-hardware).
 
 
 ## Status
@@ -140,4 +166,5 @@ Product owners:
 * Marco Winkelman · [@MarcoW71](https://github.com/MarcoW71)
 
 We use and gratefully acknowlegde the efforts of the makers of:
+* [Twomes P1 Gateway Hardware](https://github.com/energietransitie/twomes-p1-gateway-hardware), by Research group Energy Transition at Windesheim University of Applied Sciences, licenced under Apache 2.0
 * [KiCad Libraries](https://kicad.github.io/), by the KiCad Development Team, licensed under [an adapted version of the CC-BY-SA 4.0 License](https://www.kicad.org/libraries/license/)

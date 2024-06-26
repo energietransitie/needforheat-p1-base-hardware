@@ -40,7 +40,7 @@ The smart meter should be connected to upper female RJ12 connector (`J2`). A tab
 | 6     | `GND`                | Power GND      | Power ground       | Power supply line      |
 
 ### Data Request Line Management
-When the `Data Request` voltage (pin 2 on the female RJ12 connecor of the P1 port of the smart meter) is at `GND`+5V, the smart meter sends data.<!-- which GND, by the way? Can there be a difference?-->
+When the `Data Request` voltage (pin 2 on the female RJ12 connecor of the P1 port of the smart meter) is at `Data GND`+5V, the smart meter sends data.
 
 The [twomes-p1-gateway-hardware/](https://github.com/energietransitie/twomes-p1-gateway-hardware/) design originally utilized a 10kΩ resistor and a 3.3V source, resulting in a high RC time constant and unreliable data reading. To address this, the design has been revised with a 1kΩ resistor and a 5V source, allowing for 5mA current flow and significantly improving signal integrity. The `meter_DATAOUT` signal is connected to a Schmitt-trigger (`IC1`) to enhance noise immunity. Transistors `Q1` and `Q2` are configured in a level-shifter circuit, converting the 3.3V logic signal (`m5_DATAREQ`) arriving from the M5Stack CoreInk via `G26` to a 5V logic signal (`DATA_REQ`), which is expected as `Data Request` input by the smart meter's P1-port.
 
